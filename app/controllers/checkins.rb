@@ -1,5 +1,6 @@
 post '/checkins/new' do
-  checkin = Checkin.new params
+  p data
+  checkin = Checkin.new
   redirect "/checkins/#{checkin.id}"
 end
 

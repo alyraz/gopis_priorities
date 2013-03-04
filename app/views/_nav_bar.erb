@@ -1,7 +1,7 @@
 <div class="nav-bar">
   <a href='/home'> Gopi's Priorities </a>
   <% if current_user %>
-    <a href="/profile/<%=@current_user.id%>"> Profile </a>
+    <a href="/users/<%=@current_user.id%>"> Profile </a>
     <a href="/logout"> Logout </a>
   <% else %>
     <a href='/loginsignup'> Login/Signup </a>
