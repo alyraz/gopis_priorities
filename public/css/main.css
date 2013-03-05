@@ -81,13 +81,15 @@ body {
 /* ------------------------ HOME -------------------- */
 #checkin-form {
   margin: auto;
-  width: 300px;
+  width: 400px;
   position: relative;
 }
 
 .slider {
   width: 200px;
   margin: 5px ;
+  display: inline-block;
+  float: right;
 }
 
 .priority {

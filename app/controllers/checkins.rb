@@ -1,6 +1,5 @@
 post '/checkins/new' do
-  p data
-  checkin = Checkin.new
+  # checkin = Checkin.new {:user_id => current_user.id}.merge(params)
   redirect "/checkins/#{checkin.id}"
 end
 
