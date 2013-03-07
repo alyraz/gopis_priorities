@@ -11,9 +11,10 @@ body {
     margin: 0px auto;
     height: 100%;
     width: 750px;
-    padding: 80px 0px;
+    padding: 90px 0px;
     font-family: Georgia, serif;
     position: relative;
+    font-size: 22px;
 }
 
 .nav-bar {
@@ -39,6 +40,27 @@ body {
 .nav-bar a:hover {
   color: #33CEC3;
 }
+
+/* ------------------------ HOME -------------------- */
+#checkin-form {
+  margin: auto;
+  width: 500px;
+  position: relative;
+  font-size: 25px;
+}
+
+.slider {
+  width: 230px;
+  margin: 5px ;
+  display: inline-block;
+  float: right;
+}
+
+.priority {
+  margin: 20px auto;
+  position: relative;
+}
+
 
 /* ------------------------ LOGINSIGNUP -------------------- */
 .login-signup {
@@ -76,25 +98,6 @@ body {
   margin-top: 10px;
   text-align: left;
   color: #a00;
-}
-
-/* ------------------------ HOME -------------------- */
-#checkin-form {
-  margin: auto;
-  width: 400px;
-  position: relative;
-}
-
-.slider {
-  width: 200px;
-  margin: 5px ;
-  display: inline-block;
-  float: right;
-}
-
-.priority {
-  margin: 10px auto;
-  position: relative;
 }
 
 

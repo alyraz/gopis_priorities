@@ -7,7 +7,8 @@ get '/home' do
 end 
 
 get '/loginsignup' do
-  erb :login_signup
+  erb :google_oauth
+  #erb :login_signup
 end 
 
 post '/signup' do 

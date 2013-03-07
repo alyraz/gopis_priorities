@@ -1,6 +1,12 @@
 post '/checkins/new' do
-  # checkin = Checkin.new {:user_id => current_user.id}.merge(params)
-  redirect "/checkins/#{checkin.id}"
+  content_type :json
+  p params
+  #currently creating checkin w/o ID. Set up Google oAuth first. 
+  checkin = Checkin.new params
+  #TODO -- validations. Do it. 
+  checkin.save
+  (checkin.id).to_json 
+  #redirect "/checkins/#{checkin.id}"
 end
 
 get "/checkins/:id" do
