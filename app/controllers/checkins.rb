@@ -1,12 +1,8 @@
-post '/checkins/new' do
+post '/checkins' do
   content_type :json
-  p params
-  #currently creating checkin w/o ID. Set up Google oAuth first. 
-  checkin = Checkin.new params
-  #TODO -- validations. Do it. 
-  checkin.save
-  (checkin.id).to_json 
-  #redirect "/checkins/#{checkin.id}"
+  checkin = Checkin.create params #currently no user (google oAuth first)
+  #TODO -- validations. Do it.
+  (checkin.id).to_json #write json to override this and return ID only 
 end
 
 get "/checkins/:id" do

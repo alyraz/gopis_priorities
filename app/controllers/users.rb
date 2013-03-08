@@ -35,4 +35,19 @@ get '/logout' do
   redirect '/home'
 end 
 
+get '/google/auth' do 
+  client = oauth_client
+  redirect_uri = client.auth_code.authorize_url(:redirect_uri => 'http://localhost:9292/oauth2callback', :scope => "https://www.googleapis.com/auth/userinfo.profile")
+  redirect redirect_uri
+end 
+
+get '/oauth2callback' do
+  client = oauth_client
+  @token = client.auth_code.get_token(params[:code], :redirect_uri => 'http://localhost:9292/oauth2callback')
+  response = @token.get('https://www.googleapis.com/oauth2/v1/userinfo', :params => { 'access_token' => @token })
+  @user_info = JSON.parse(response.body)
+  # now create a user with .name, photo 
+ end 
+
+
 

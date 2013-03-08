@@ -16,8 +16,11 @@ gem 'activesupport'
 gem 'activerecord'
 
 gem 'rake'
+gem 'oauth2'
 
-group :test do
-  gem 'faker'
-  gem 'rspec'
-end
+gem 'faker'
+gem 'rspec'
+
+gem 'foreman'
+gem 'better_errors'
+gem 'json'

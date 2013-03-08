@@ -4,6 +4,10 @@ require ::File.expand_path('../config/environment',  __FILE__)
 set :app_file, __FILE__
 
 configure do
+  set :raise_errors, true
+  set :show_exceptions, false
+  use BetterErrors::Middleware
+  BetterErrors.application_root = File.expand_path("..", __FILE__)
   # See: http://www.sinatrarb.com/faq.html#sessions
   enable :sessions
   set :session_secret, ENV['SESSION_SECRET'] || 'this is a secret shhhhh'

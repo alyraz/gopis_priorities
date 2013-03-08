@@ -20,10 +20,9 @@ $(document).ready(function(){
             priorities[id] = ui.value 
         }
     });
-
     $("#checkin-form").submit(function(e){
         e.preventDefault();
-        $.post('/checkins/new', priorities).done(function(checkin_id){
+        $.post('/checkins', priorities).done(function(checkin_id){
            window.location = "http://localhost:9292/checkins/" + checkin_id 
          });
         

@@ -1,6 +1,6 @@
 /* --------------- GLOBAL ---------- */
 body {
-  font-family: Helvetica;
+  font-family: "PT Sans",sans-serif;
   color: #555;
  /* background: #C1F8F8;*/
 
@@ -11,7 +11,7 @@ body {
     margin: 0px auto;
     height: 100%;
     width: 750px;
-    padding: 90px 0px;
+    padding: 110px 0px;
     font-family: Georgia, serif;
     position: relative;
     font-size: 22px;
@@ -60,6 +60,25 @@ body {
   margin: 20px auto;
   position: relative;
 }
+
+/* ------------------------ Google Signup -------------------- */
+#goog-signin-btn {
+  background-color: #498dfe;
+  border: 1px solid #4d90fe;
+  padding: .5em .75em;
+  font-size: 1.5em;
+  border-radius: 3px;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+}
+
+.goog-btn-wrapper {
+  width: 350px;
+  margin: auto;
+  padding-top: 200px;
+}
+
 
 
 /* ------------------------ LOGINSIGNUP -------------------- */
