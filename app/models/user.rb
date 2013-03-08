@@ -5,10 +5,10 @@ class User < ActiveRecord::Base
 
   has_many :checkins
   
-  validates_presence_of :name, :email, :password
+  #validates_presence_of :name, :email, :password --- currently not requiring pw due to Google Login
 
-  validates :email, format:     { with: VALID_EMAIL_REGEX },
-                    uniqueness: { case_sensitive: false }
+  #validates :email, format:     { with: VALID_EMAIL_REGEX },
+                    #uniqueness: { case_sensitive: false }
 
   before_create :encrypt_password
 

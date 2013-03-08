@@ -45,8 +45,14 @@ get '/oauth2callback' do
   client = oauth_client
   @token = client.auth_code.get_token(params[:code], :redirect_uri => 'http://localhost:9292/oauth2callback')
   response = @token.get('https://www.googleapis.com/oauth2/v1/userinfo', :params => { 'access_token' => @token })
-  @user_info = JSON.parse(response.body)
-  # now create a user with .name, photo 
+  user_info = JSON.parse(response.body)
+  new_user = User.new :name => user_info["name"],
+                       :photo_src => user_info["picture"],
+                       :email => 'googleuser@gmail.com',
+                       :password => 'password'
+  new_user.save! 
+  login(new_user.id)
+  redirect '/home'
  end 
 
 

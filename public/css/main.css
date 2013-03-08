@@ -19,7 +19,7 @@ body {
 
 .nav-bar {
   width: 100%;
-  height: 64px;
+  height: 80px;
   background-color: #009D91;  
   float: left;
   position: fixed;
@@ -29,10 +29,10 @@ body {
 
 .nav-bar a {
   color: white;
-  font-size: 20pt;
+  font-size: 25pt;
   padding: 40px;
   position: relative;
-  top: 13px;
+  top: 30px;
   text-decoration: none;
 
 }
@@ -41,7 +41,37 @@ body {
   color: #33CEC3;
 }
 
+.nav-bar img {
+  width: 70px;
+  height: 70px;
+  border-radius: 500px;
+  display: inline;
+  position: absolute;
+  right: 20px;
+  top: 5px;
+}
+
+.nav-bar #goog-signin-btn {
+  background-color: #498dfe;
+  border: 1px solid #4d90fe;
+  padding: .5em .75em;
+  font-size: 18px;
+  border-radius: 3px;
+  color: #fff;
+  text-decoration: none;
+  position: absolute;
+  width: 200px;
+  right: 20px;
+  top: 20px;
+  text-align: center;
+}
+
 /* ------------------------ HOME -------------------- */
+#welcome {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
 #checkin-form {
   margin: auto;
   width: 500px;
@@ -61,24 +91,16 @@ body {
   position: relative;
 }
 
-/* ------------------------ Google Signup -------------------- */
-#goog-signin-btn {
-  background-color: #498dfe;
-  border: 1px solid #4d90fe;
-  padding: .5em .75em;
-  font-size: 1.5em;
-  border-radius: 3px;
-  color: #fff;
-  text-decoration: none;
+#checkin-form #submit-btn {
+  width: 150px; 
+  height: 50px;
+  background-color: #009D91;
+  color: white;
+  border-radius: 4px;
   position: relative;
-}
-
-.goog-btn-wrapper {
-  width: 350px;
   margin: auto;
-  padding-top: 200px;
-}
 
+}
 
 
 /* ------------------------ LOGINSIGNUP -------------------- */

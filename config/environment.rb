@@ -35,6 +35,6 @@ Dir[APP_ROOT.join('app', 'helpers', '*.rb')].each { |file| require file }
 require APP_ROOT.join('config', 'database')
 
 # Set up my Google credentials
-raise "No GOOGLE_CLIENT_ID and GOOGLE_CLIENT_SECRET found in environment!" unless ENV['GOOGLE_CLIENT_ID'] && ENV['GOOGLE_CLIENT_SECRET']
+#raise "No GOOGLE_CLIENT_ID and GOOGLE_CLIENT_SECRET found in environment!" unless ENV['GOOGLE_CLIENT_ID'] && ENV['GOOGLE_CLIENT_SECRET']
 GOOGLE_CLIENT_ID = ENV['GOOGLE_CLIENT_ID']
 GOOGLE_CLIENT_SECRET = ENV['GOOGLE_CLIENT_SECRET']
